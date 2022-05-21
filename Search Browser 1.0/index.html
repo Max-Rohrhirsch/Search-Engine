@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head  lang="de">
+	<title>Search Engine</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta charset="UTF-8">
+	<meta name="description" content="own search engine">
+	<meta name="author" content="Max Rohrhirsch">
+	<!-- <link rel="stylesheet" type="text/css" href="styles.css"> -->
+	<!-- <link rel="icon" href="favicon.gif" type="image/gif" sizes="16x16"> -->
+	<style>
+		body {
+			background-color: #333;
+			background-image: url('./Static/Pictures/Wallpaper.jpg');
+			background-repeat: no-repeat;
+			background-size: cover;
+			margin: 0;
+		}
+
+		#InputField {
+			width: 350px;
+			height: 25px;
+			/* font-size: 20px; */
+			font-family: sans-serif;
+			padding-left: 10px;
+		}
+
+		#SearchButton {
+			width: 70px;
+			height: 31px;
+		}
+
+		form {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			-ms-transform: translate(-50%, -50%);
+			transform: translate(-50%, -50%);
+		}
+	</style>
+</head>
+<body>
+	<form method="get" action="/results">
+		<input type="text"   placeholder="Type text to Search..."   id="InputField"  name="searchField"/>
+		<input type="submit" value="Search!" 	                    id="SearchButton">
+	</form>
+</body>
+</html>

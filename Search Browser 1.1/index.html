@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head  lang="de">
+	<title>Search Engine</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta charset="UTF-8">
+	<meta name="description" content="own search engine">
+	<meta name="author" content="Max Rohrhirsch">
+
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet"> <!-- Schriftart -->
+
+	<!-- <link rel="icon" href="favicon.gif" type="image/gif" sizes="16x16"> -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">	<!-- Icons -->
+	<style>
+		body {
+			margin: 0;
+            background-image: url('Pictures/Wallpaper.jpg');
+			background-repeat: no-repeat;
+			background-size: auto;
+
+			font-family: 'Roboto', sans-serif;
+			font-weight: 700;
+			font-style: normal;
+			color: #444;
+		}
+
+		#InputField {
+			width: 400px;
+			height: 36px;
+			font-size: 17px;
+			font-family: sans-serif;
+			padding-left: 10px;
+
+		}
+
+		#SearchButton {
+			width: 40px;
+			height: 36px;
+			/* margin-left: -5px; */
+			transform: translate(-4px, 5%);
+		}
+		#SearchButton:hover {
+			cursor: pointer;
+		}
+
+		form {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+		}
+
+		.glyphicon {
+			font-size: 20px;
+			color: black;
+		}
+		a {
+			font-size: 20px;
+			text-decoration: none;
+			margin: 10px;
+			color: black;
+			float: right;
+		}
+		a:hover {
+			text-decoration: underline;
+			cursor: pointer;
+			color: black;
+		}
+	</style>
+</head>
+<body>
+	<a href="./Static/ueber.html">Über</a>
+	<a href="">Einstellung</a>
+
+
+	<!-- ########################################### -->
+	<!-- #######            MAIN CODE                -->
+	<!-- ########################################### -->
+	<form method="get" action="/results">
+		<input type="text"   placeholder="Type text to Search..." id="InputField"  name="searchField"/>
+		<button type="submit" id="SearchButton"><span class="glyphicon">&#xe003;</span></button>
+	</form>
+</body>
+</html>

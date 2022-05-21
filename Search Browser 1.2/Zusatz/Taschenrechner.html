@@ -1,0 +1,85 @@
+<!-- präsentiert von kostenlose-javascripts.de -->
+<script type='text/javascript'>
+<!--
+ function Ergebnis()
+ {
+   var x = 0;
+   x = eval(window.document.Rechner.Display.value);
+   window.document.Rechner.Display.value = x;
+ }
+ function Hinzufuegen(Zeichen)
+ {
+  window.document.Rechner.Display.value =
+  window.document.Rechner.Display.value + Zeichen;
+ }
+ function Sonderfunktion(Funktion)
+ {
+  if(Funktion == "sqrt")
+   {
+     var x = 0;
+     x = eval(window.document.Rechner.Display.value);
+     window.document.Rechner.Display.value = Math.sqrt(x);
+   }
+   if(Funktion == "pow")
+   {
+     var x = 0;
+     x = eval(window.document.Rechner.Display.value);
+     window.document.Rechner.Display.value = x * x;
+   }
+   if(Funktion == "log")
+   {
+     var x = 0;
+     x = eval(window.document.Rechner.Display.value);
+     window.document.Rechner.Display.value = Math.log(x);
+   }
+}
+
+//-->
+</script>
+<form name="Rechner">
+  <table border="10" cellpadding="10" bgcolor="#E0E0E0">
+    <tr>
+      <td bgcolor="#C0C0C0"><input name="Display" size="30" maxlength="30"></td>
+    </tr>
+    <tr>
+      <td>
+	  <table>
+        <tr>
+          <td width="50"><input type="button" value="   7   " onclick="Hinzufuegen('7')"></td>
+          <td width="50"><input type="button" value="   8   " onclick="Hinzufuegen('8')"></td>
+          <td width="70"><input type="button" value="   9   " onclick="Hinzufuegen('9')"></td>
+          <td width="50"><input type="button" value="   +    " onclick="Hinzufuegen('+')"></td>
+        </tr>
+        <tr>
+          <td width="50"><input type="button" value="   4   " onclick="Hinzufuegen('4')"></td>
+          <td width="50"><input type="button" value="   5   " onclick="Hinzufuegen('5')"></td>
+          <td width="70"><input type="button" value="   6   " onclick="Hinzufuegen('6')"></td>
+          <td width="50"><input type="button" value="    -    " onclick="Hinzufuegen('-')"></td>
+        </tr>
+        <tr>
+          <td width="50"><input type="button" value="   1   " onclick="Hinzufuegen('1')"></td>
+          <td width="50"><input type="button" value="   2   " onclick="Hinzufuegen('2')"></td>
+          <td width="70"><input type="button" value="   3   " onclick="Hinzufuegen('3')"></td>
+          <td width="50"><input type="button" value="    *    " onclick="Hinzufuegen('*')"></td>
+        </tr>
+        <tr>
+          <td width="50"><input type="button" value="    =    " onclick="Ergebnis()"></td>
+          <td width="50"><input type="button" value="   0   " onclick="Hinzufuegen('0')"></td>
+          <td width="70"><input type="button" value="   .    " onclick="Hinzufuegen('.')"></td>
+          <td width="50"><input type="button" value="    /    " onclick="Hinzufuegen('/')"></td>
+        </tr>
+        <tr>
+          <td width="50"><input type="button" value="Wurzel " onclick="Sonderfunktion('sqrt')"></td>
+          <td width="50"><input type="button" value=" pow " onclick="Sonderfunktion('pow')"></td>
+          <td width="70"><input type="button" value=" log " onclick="Sonderfunktion('log')"></td>
+          <td width="50"><input type="reset" value="   C   "></td>
+        </tr>
+        <tr>
+           <td colspan="4" style="font-family: Arial; font-size: 12px; text-align: center;">JavaScript von <a href="http://www.kostenlose-javascripts.de/javascripts/mathematik/taschenrechner/" target="_blank">kostenlose-javascripts.de</a></td>
+        </tr>
+      </table>
+      </td>
+    </tr>
+  </table>
+</form>
+<!-- präsentiert von kostenlose-javascripts.de -->
